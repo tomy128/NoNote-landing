@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "tag": "v0.1.0",
+  "releaseUrl": "https://github.com/tomy128/NoNote/releases/tag/v0.1.0",
+  "verifiedAt": "2026-07-27",
+  "unsigned": true,
+  "platforms": [
+    {
+      "id": "macos-arm64",
+      "os": "macos",
+      "label": "macOS · Apple Silicon",
+      "arch": "arm64",
+      "format": "DMG",
+      "requirement": "See Release requirements",
+      "url": "https://github.com/tomy128/NoNote/releases/download/v0.1.0/NoNote_0.1.0_macos_aarch64.dmg"
+    },
+    {
+      "id": "macos-x64",
+      "os": "macos",
+      "label": "macOS · Intel",
+      "arch": "x64",
+      "format": "DMG",
+      "requirement": "See Release requirements",
+      "url": "https://github.com/tomy128/NoNote/releases/download/v0.1.0/NoNote_0.1.0_macos_x86_64.dmg"
+    },
+    {
+      "id": "windows-x64",
+      "os": "windows",
+      "label": "Windows",
+      "arch": "x64",
+      "format": "EXE",
+      "requirement": "Windows 10 22H2 or newer",
+      "url": "https://github.com/tomy128/NoNote/releases/download/v0.1.0/NoNote_0.1.0_windows_x86_64-setup.exe"
+    }
+  ]
+}

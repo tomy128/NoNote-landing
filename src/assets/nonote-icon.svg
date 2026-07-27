@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none">
+  <defs>
+    <linearGradient id="background" x1="160" y1="110" x2="850" y2="930" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#181D2B"/>
+      <stop offset="0.58" stop-color="#0E121D"/>
+      <stop offset="1" stop-color="#080B12"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="290" y1="230" x2="690" y2="790" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="0.7" stop-color="#F7F6FB"/>
+      <stop offset="1" stop-color="#E5E6EF"/>
+    </linearGradient>
+    <linearGradient id="fold" x1="332" y1="332" x2="706" y2="706" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6F1FF"/>
+      <stop offset="0.25" stop-color="#A56BFF"/>
+      <stop offset="0.58" stop-color="#7657F5"/>
+      <stop offset="1" stop-color="#79C7FF"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="102" y1="78" x2="886" y2="962" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6F7891" stop-opacity="0.72"/>
+      <stop offset="0.3" stop-color="#31394C" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#111725" stop-opacity="0.16"/>
+    </linearGradient>
+    <filter id="tileShadow" x="0" y="8" width="1024" height="1032" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="22" stdDeviation="24" flood-color="#02040A" flood-opacity="0.34"/>
+    </filter>
+    <filter id="markShadow" x="188" y="184" width="648" height="682" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#00030A" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#tileShadow)">
+    <rect x="44" y="36" width="936" height="936" rx="224" fill="url(#background)"/>
+    <rect x="45.5" y="37.5" width="933" height="933" rx="222.5" stroke="url(#rim)" stroke-width="3"/>
+  </g>
+
+  <g filter="url(#markShadow)">
+    <rect x="628" y="230" width="152" height="564" rx="76" fill="url(#paper)"/>
+    <path d="M320 306L704 718" stroke="url(#fold)" stroke-width="152" stroke-linecap="round"/>
+    <rect x="244" y="230" width="152" height="564" rx="76" fill="url(#paper)"/>
+  </g>
+</svg>

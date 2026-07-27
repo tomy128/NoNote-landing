@@ -1,0 +1,15 @@
+{
+  "name": "nonote-landing",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/build.mjs",
+    "sync:release": "node scripts/sync-release.mjs",
+    "check": "node --test tests/*.test.mjs && SITE_URL=https://nonote.example npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "langName": "English",
+  "meta": {
+    "title": "NoNote — Your local knowledge, finally useful",
+    "description": "A local-first AI workspace to search, understand and chat with the files and notes you already keep."
+  },
+  "nav": {
+    "product": "Product",
+    "privacy": "Local-first",
+    "download": "Download",
+    "github": "GitHub",
+    "language": "中文"
+  },
+  "hero": {
+    "eyebrow": "Not Only Notes.",
+    "title": "Everything you keep,",
+    "titleAccent": "finally useful.",
+    "body": "NoNote turns local files, notes and research into a workspace you can search, understand, ask and build on.",
+    "download": "Download NoNote",
+    "github": "View on GitHub",
+    "note": "Free and open source · macOS & Windows",
+    "preview": "Product interface preview",
+    "demoSteps": ["Search across files", "Open grounded sources", "Turn answers into notes"]
+  },
+  "proof": ["Local-first by design", "Markdown · TXT · PDF · DOCX", "Cloud or local AI providers", "Open-source and inspectable"],
+  "workflow": {
+    "eyebrow": "A shorter path to value",
+    "title": "Keep your files. Change what they can do.",
+    "body": "No migration ritual. Add a workspace and start with the material you already have.",
+    "steps": [
+      {"id":"keep","number":"01","title":"Keep","text":"Work with ordinary files in folders you control."},
+      {"id":"understand","number":"02","title":"Understand","text":"NoNote extracts text, summaries, tags and a searchable index."},
+      {"id":"ask","number":"03","title":"Ask","text":"Search and chat across your knowledge with source citations."},
+      {"id":"create","number":"04","title":"Create","text":"Save a useful answer as an editable Markdown note."}
+    ]
+  },
+  "capabilities": {
+    "eyebrow": "Built around real work",
+    "title": "From scattered material to grounded answers.",
+    "items": [
+      {"label":"Read","title":"One workspace for the files you already use","text":"Bring Markdown, text, PDF and DOCX into a consistent reading and knowledge workflow."},
+      {"label":"Find","title":"Search words and meaning together","text":"Hybrid retrieval combines exact keywords with semantic relevance instead of forcing a single search mode."},
+      {"label":"Ask","title":"Answers that point back to their source","text":"Attach files or ask across your workspace. Citations keep the answer connected to the underlying material."},
+      {"label":"Make","title":"Knowledge can become a real file again","text":"Preview an AI answer, choose a location and save it as an editable Markdown note—with your confirmation."}
+    ]
+  },
+  "local": {
+    "eyebrow": "Local-first, not local-only",
+    "title": "Your files stay files.",
+    "body": "NoNote keeps original material in your file system. Metadata and indexes live locally. You decide which AI provider to connect and when content may leave your device.",
+    "points": [
+      "Original files remain accessible outside NoNote",
+      "Local indexing and metadata",
+      "Choose cloud or local OpenAI-compatible providers",
+      "Writes and destructive actions stay behind explicit boundaries"
+    ],
+    "link": "Inspect the source"
+  },
+  "showcase": {
+    "eyebrow": "One continuous workflow",
+    "title": "Research without losing the trail.",
+    "items": [
+      {"number":"01","title":"See the material","text":"Read the document, its summary, tags and related sources in the same workspace."},
+      {"number":"02","title":"Ask with context","text":"Bring specific files into the conversation and follow citations back to the source."},
+      {"number":"03","title":"Keep the result","text":"Save the answer you want as a note instead of leaving useful work trapped in chat."}
+    ]
+  },
+  "download": {
+    "eyebrow": "Early release",
+    "title": "Put your knowledge back to work.",
+    "body": "Choose your platform. Current builds are unsigned community test releases, so your operating system may show an unknown publisher warning.",
+    "recommended": "Recommended",
+    "download": "Download",
+    "requirements": "Requirements",
+    "allReleases": "View all releases",
+    "unsigned": "Unsigned test build"
+  },
+  "faq": {
+    "eyebrow": "Good questions",
+    "title": "Before you install.",
+    "items": [
+      {"q":"Will NoNote upload my files?","a":"NoNote is local-first. Original files stay in your file system. If you configure a cloud AI provider, relevant content is sent only when needed for the request. You can instead connect a compatible local provider."},
+      {"q":"Which file types are supported?","a":"The current release understands Markdown, TXT, PDF and DOCX. Original files are preserved; NoNote does not edit Word documents."},
+      {"q":"Can I use a local model?","a":"Yes. NoNote can connect to compatible local providers such as Ollama. Model availability and performance depend on your hardware."},
+      {"q":"Is NoNote free and open source?","a":"Yes. The source is available on GitHub under the MIT license."},
+      {"q":"Which systems are supported?","a":"Current release assets include macOS for Apple Silicon and Intel, plus Windows x64. Linux packaging is not part of this release."},
+      {"q":"How do I report an issue?","a":"Open an issue in the GitHub repository and include your NoNote version, operating system and steps to reproduce."}
+    ]
+  },
+  "footer": {
+    "tagline": "Not Only Notes.",
+    "product": "Product",
+    "download": "Download",
+    "source": "Source",
+    "releases": "Releases",
+    "license": "License",
+    "copyright": "NoNote. Your knowledge stays yours."
+  }
+}

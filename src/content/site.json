@@ -1,0 +1,9 @@
+{
+  "name": "NoNote",
+  "repository": "https://github.com/tomy128/NoNote",
+  "releases": "https://github.com/tomy128/NoNote/releases",
+  "latestRelease": "https://github.com/tomy128/NoNote/releases/latest",
+  "license": "MIT",
+  "defaultLocale": "en",
+  "locales": ["en", "zh-CN"]
+}
