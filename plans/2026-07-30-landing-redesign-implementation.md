@@ -1,7 +1,7 @@
 # NoNote Landing Redesign Implementation
 
 > Date: 2026-07-30
-> Status: In progress
+> Status: Implementation complete; awaiting real product captures
 > Design: `docs/2026-07-30-landing-redesign-design.md`
 
 ## Goal
@@ -60,3 +60,11 @@ Verification:
 - Browser screenshots match the approved direction.
 - No console errors or broken assets.
 - Landing repository is clean after focused commits.
+
+## Result
+
+- The bilingual narrative, static rendering, visual system, responsive layout, motion and interaction states are implemented.
+- The old concept product image has been removed and is not referenced by production output or metadata.
+- Explicit product-media placeholders reserve the final compositions until verified MVP captures arrive.
+- Automated tests and production builds pass; desktop and narrow viewport screenshots have been reviewed.
+- Final asset conversion, source records and screenshot-specific tuning remain pending on the eight real MVP source captures.

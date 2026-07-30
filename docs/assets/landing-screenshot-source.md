@@ -1,22 +1,38 @@
-# Landing product preview source
+# Landing product image sources
 
-## Current asset
+## Current state
 
-- File: `src/assets/product-preview.jpg`
-- Source: `NoNote/docs/images/draft-ui.png`
-- Type: Product interface concept preview
-- Original size: 1568 × 1003
-- Privacy: Synthetic workspace and synthetic content; no personal data
+The redesigned landing page intentionally uses product-media placeholders. No concept UI is presented as product evidence.
 
-## Usage boundary
+The previous `product-preview.jpg` was derived from an early interface concept and is banned from production HTML, CSS, JavaScript, structured data and social metadata.
 
-The image is labeled “Product interface preview” on the website. It may illustrate capabilities that are independently verified in the current codebase, but it must not be described as an unedited screenshot of a released build.
+## Required captures
 
-Before replacing it with a release screenshot, capture:
+Each locale needs four PNG source captures from the current NoNote MVP:
 
-1. Full workspace with document reader and Assistant.
-2. Real search results.
-3. Assistant response with citations.
-4. Save as Note preview.
+| File | Scene |
+| --- | --- |
+| `zh-workspace.png` / `en-workspace.png` | Complete four-pane Workspace |
+| `zh-reader.png` / `en-reader.png` | Reader or Focus Reader |
+| `zh-assistant.png` / `en-assistant.png` | Assistant answer with citations |
+| `zh-output.png` / `en-output.png` | Save as Note or Task Center |
 
-Record the application tag, OS, locale and any redaction for every replacement.
+Place original files in `src/assets/product/source/`. Do not crop, compress, add shadows or redraw interface elements before adding them.
+
+## Record required for every production asset
+
+- Production filename
+- Original source filename
+- Application commit or release tag
+- Operating system
+- UI locale
+- Scenario and capture steps
+- Crop, compression, masking or two-dimensional transform
+- Privacy review result
+
+## Privacy and authenticity
+
+- Use a synthetic, publishable demo Workspace.
+- Do not include real names, personal files, absolute paths, secrets or private conversations.
+- Controls, layout, states and results must come from the running MVP.
+- Cropping and format conversion are allowed; generating or redrawing product UI is not.
