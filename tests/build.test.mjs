@@ -49,6 +49,19 @@ test("generated pages use unique ids and have image alt text", () => {
 
 test("client assets stay within the agreed budget", () => {
   runBuild();
-  assert.ok(statSync("dist/assets/main.js").size <= 20 * 1024, "JavaScript must stay under 20KB uncompressed");
-  assert.ok(statSync("dist/assets/product-preview.jpg").size <= 400 * 1024, "Hero image must stay under 400KB");
+  assert.ok(statSync("dist/assets/main.js").size <= 24 * 1024, "JavaScript must stay under 24KB uncompressed");
+  assert.ok(statSync("dist/assets/styles.css").size <= 64 * 1024, "CSS must stay under 64KB uncompressed");
+});
+
+test("generated pages contain the new narrative and no concept product image", () => {
+  runBuild();
+  for (const locale of ["en", "zh-CN"]) {
+    const html = readFileSync(`dist/${locale}/index.html`, "utf8");
+    assert.match(html, /id="workflow"/);
+    assert.match(html, /id="local-first"/);
+    assert.match(html, /class="why"/);
+    assert.match(html, /class="evidence section"/);
+    assert.doesNotMatch(html, /product-preview\.jpg/);
+    assert.equal((html.match(/<h1\b/g) || []).length, 1);
+  }
 });

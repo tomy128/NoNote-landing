@@ -1,95 +1,120 @@
 {
   "langName": "简体中文",
   "meta": {
-    "title": "NoNote — 让你保存的一切，真正为你所用",
-    "description": "一个 Local-First 的 AI 工作空间，用来搜索、理解并对话你已经保存的本地文件与笔记。"
+    "title": "NoNote — 你的文件，不该只是被保存",
+    "description": "NoNote 是面向已有本地资料的 Local-First AI 工作空间，让文件重新变得可搜索、可理解、可对话、可继续创作。"
   },
   "nav": {
-    "product": "产品",
+    "workflow": "工作方式",
     "privacy": "本地优先",
     "download": "下载",
     "github": "GitHub",
-    "language": "English"
+    "language": "English",
+    "menu": "打开导航"
   },
   "hero": {
-    "eyebrow": "不只是笔记。",
-    "title": "让你保存的一切，",
-    "titleAccent": "真正为你所用。",
-    "body": "NoNote 把本地文件、笔记和研究资料变成一个可以搜索、理解、提问并继续创作的工作空间。",
-    "download": "下载 NoNote",
-    "github": "前往 GitHub",
+    "eyebrow": "Not Only Notes.",
+    "title": "你的文件，",
+    "titleAccent": "不该只是被保存。",
+    "body": "NoNote 从你已经拥有的资料开始，把散落在电脑里的文件、笔记和研究，重新变成可搜索、可理解、可对话、可继续创作的知识。",
+    "download": "查看适合你的版本",
+    "github": "在 GitHub 查看",
     "note": "免费开源 · 支持 macOS 与 Windows",
-    "preview": "产品界面预览",
-    "demoSteps": ["跨文件搜索", "打开可靠引用", "把回答保存为笔记"]
+    "mediaLabel": "真实 NoNote 产品界面",
+    "mediaPending": "真实 MVP 产品图即将加入",
+    "mediaHint": "完整四栏工作台 · 中文界面",
+    "demoSteps": ["从已有文件开始", "理解并找到依据", "把结果存回笔记"]
   },
-  "proof": ["Local-First 架构", "Markdown · TXT · PDF · DOCX", "可连接云端或本地 AI", "开源、可检查"],
-  "workflow": {
-    "eyebrow": "更短的价值路径",
-    "title": "保留你的文件，改变它们能做什么。",
-    "body": "无需先完成一场知识迁移。加入一个 Workspace，就从你已经拥有的资料开始。",
-    "steps": [
-      {"id":"keep","number":"01","title":"保存","text":"继续使用由你掌控、位于普通目录中的文件。"},
-      {"id":"understand","number":"02","title":"理解","text":"NoNote 提取文本、摘要和标签，并建立可搜索索引。"},
-      {"id":"ask","number":"03","title":"提问","text":"跨知识库搜索和对话，同时保留真实来源引用。"},
-      {"id":"create","number":"04","title":"创作","text":"把有价值的回答保存为可编辑的 Markdown 笔记。"}
-    ]
-  },
-  "capabilities": {
-    "eyebrow": "围绕真实工作",
-    "title": "从散落资料，到有依据的回答。",
+  "proof": ["原文件仍归你掌控", "Markdown · TXT · PDF · DOCX", "支持云端或本地模型", "开源、可检查"],
+  "problem": {
+    "lead": "我们并不缺少保存工具。",
+    "title": "真正困难的是，让保存过的东西再次参与工作。",
+    "body": "文件越来越多，价值却在保存之后逐渐沉默。你记得读过，却找不到那句话；知道资料存在，却无法把散落的线索连起来。",
     "items": [
-      {"label":"阅读","title":"让已有文件进入同一个工作空间","text":"统一阅读和理解 Markdown、TXT、PDF 与 DOCX，同时保留原文件。"},
-      {"label":"查找","title":"同时搜索文字与含义","text":"混合检索结合精确关键词和语义相关性，不强迫你只选一种搜索方式。"},
-      {"label":"提问","title":"每个回答都能回到来源","text":"附加特定文件，或跨 Workspace 提问；引用让答案始终连接原始资料。"},
-      {"label":"产出","title":"让知识重新成为真实文件","text":"预览 AI 回答、选择保存位置并确认，将它保存成可编辑的 Markdown 笔记。"}
+      {"number": "01", "title": "找得到文件，找不到答案", "text": "文件夹记录了位置，却没有记录你为什么保存、它与什么有关。"},
+      {"number": "02", "title": "每次工作都从重新阅读开始", "text": "PDF、Word、Markdown 和笔记分散在不同上下文里，理解无法积累。"},
+      {"number": "03", "title": "有价值的回答停在聊天里", "text": "一次问答结束后，结果很难回到你的文件体系继续演进。"}
     ]
+  },
+  "workflow": {
+    "lead": "一条连续的价值路径",
+    "title": "保留你的文件，改变它们能做什么。",
+    "body": "不需要先完成一场知识迁移。NoNote 围绕原有文件建立理解，让查找、提问和产出成为同一段工作。",
+    "mediaPending": "此处将展示同一真实 Workspace 的连续界面",
+    "steps": [
+      {"id": "keep", "number": "01", "verb": "已有文件", "title": "从你已经保存的内容开始", "text": "导入普通文件夹，保留熟悉的目录结构和原始文件。"},
+      {"id": "understand", "number": "02", "verb": "理解与检索", "title": "不只匹配文件名，也理解内容", "text": "在 Markdown、TXT、PDF 与 DOCX 中统一阅读，并结合文字与语义检索。"},
+      {"id": "ask", "number": "03", "verb": "有依据的对话", "title": "沿着回答回到真实来源", "text": "附加具体文件或跨 Workspace 提问；引用把回答连接到原始资料。"},
+      {"id": "create", "number": "04", "verb": "新的产出", "title": "让结果重新成为你的文件", "text": "预览有价值的回答，选择位置并保存为可编辑的 Markdown 笔记。"}
+    ]
+  },
+  "why": {
+    "lead": "为什么做 NoNote",
+    "title": "我们已经保存了很多。真正缺少的是理解。",
+    "body": "大多数知识工具从一张空白页开始，要求你重新整理、重新迁移、重新养成习惯。NoNote 选择另一条路：尊重已经存在的文件系统，从你过去的积累开始。",
+    "quote": "不要求你重建一套知识系统。让你已经拥有的内容，重新参与今天的工作。",
+    "signature": "NoNote · Not Only Notes."
   },
   "local": {
-    "eyebrow": "本地优先，而非只能本地",
-    "title": "你的文件，始终是你的文件。",
-    "body": "NoNote 将原始资料留在文件系统中，在本地保存元数据和索引。由你决定连接哪个 AI Provider，以及何时允许内容离开设备。",
+    "lead": "Local-First，不是口号",
+    "title": "文件留在本地，选择留在你手里。",
+    "body": "原始资料保留在你选择的数据位置，元数据和索引存储在本地。你可以连接本地模型，也可以选择远程 Provider；使用远程 Provider 时，请求所需的相关内容可能发送给对应服务。",
     "points": [
-      "离开 NoNote 仍能直接访问原文件",
-      "元数据和索引保存在本地",
-      "可选择云端或本地 OpenAI-compatible Provider",
-      "写入和危险操作始终受明确边界约束"
+      {"title": "文件仍然是普通文件", "text": "离开 NoNote，也能直接访问和管理原始资料。"},
+      {"title": "模型由你选择", "text": "可连接 Ollama 等本地模型，或配置 OpenAI-compatible 远程服务。"},
+      {"title": "边界可以被检查", "text": "数据位置、任务状态、公开源代码与 Release 都提供可验证入口。"}
     ],
-    "link": "检查源代码"
+    "source": "检查源代码",
+    "release": "查看 Release",
+    "diagram": {
+      "files": "你的文件",
+      "index": "本地索引",
+      "choice": "你的选择",
+      "provider": "AI Provider",
+      "local": "设备内",
+      "controlled": "明确授权"
+    }
   },
-  "showcase": {
-    "eyebrow": "一条连续工作流",
-    "title": "研究过程，不再丢失来路。",
+  "evidence": {
+    "lead": "真实产品，真实工作流",
+    "title": "不是概念原型，而是已经在工作的 NoNote。",
+    "body": "最终产品图将全部来自当前 MVP 的真实运行界面。现在的媒体槽先固定构图、说明和动效，素材到位后无需改版。",
+    "open": "放大查看",
+    "close": "关闭产品图",
     "items": [
-      {"number":"01","title":"看见资料","text":"在同一个工作空间阅读文档、摘要、标签和相关来源。"},
-      {"number":"02","title":"带着上下文提问","text":"把具体文件带入对话，并沿着引用回到原始资料。"},
-      {"number":"03","title":"留下真正有用的结果","text":"把想保留的回答存成 Note，不让有价值的工作困在聊天记录里。"}
+      {"id": "reader", "number": "01", "label": "阅读", "title": "在同一个工作空间理解不同文件", "text": "阅读原文、摘要与标签，并随时进入更专注的阅读模式。", "media": "Reader / Focus Reader 真实截图"},
+      {"id": "assistant", "number": "02", "label": "提问", "title": "回答始终连接它的来源", "text": "把具体文件带入对话，在引用中看见依据，而不是只得到一段无法验证的文字。", "media": "Assistant 与引用真实截图"},
+      {"id": "output", "number": "03", "label": "留下", "title": "把有价值的结果变成可编辑笔记", "text": "确认内容和保存位置后，让产出回到你的 Workspace 继续演进。", "media": "Save as Note / 任务中心真实截图"}
     ]
   },
   "download": {
-    "eyebrow": "早期版本",
-    "title": "让你的知识重新开始工作。",
-    "body": "选择你的平台。当前安装包属于未签名的社区测试版本，操作系统可能显示“未知发布者”提示。",
-    "recommended": "推荐",
+    "lead": "开始使用",
+    "title": "让你的知识，重新开始工作。",
+    "body": "选择适合当前设备的安装包。我们只会突出推荐版本，不会自动下载，也不会隐藏其他可用选择。",
+    "recommended": "适合当前设备",
     "download": "下载",
     "requirements": "系统要求",
     "allReleases": "查看全部 Release",
-    "unsigned": "未签名测试版"
+    "unsigned": "当前为未签名社区测试版",
+    "unknown": "无法可靠判断你的平台，请从下方选择。",
+    "macUnknown": "无法判断 Mac 芯片类型，请根据“关于本机”选择 Apple Silicon 或 Intel。"
   },
   "faq": {
-    "eyebrow": "安装前的问题",
-    "title": "把边界说清楚。",
+    "lead": "把边界说清楚",
+    "title": "安装前，值得知道的事。",
     "items": [
-      {"q":"NoNote 会上传我的文件吗？","a":"NoNote 以本地优先为原则，原始文件保留在你的文件系统中。如果你配置云端 AI Provider，只有完成请求所需的相关内容会被发送；也可以连接兼容的本地 Provider。"},
-      {"q":"目前支持哪些文件？","a":"当前版本可以理解 Markdown、TXT、PDF 和 DOCX。原始文件会被保留；NoNote 不负责编辑 Word 文档。"},
-      {"q":"可以使用本地模型吗？","a":"可以。NoNote 能连接 Ollama 等兼容的本地 Provider，实际可用模型和速度取决于你的设备。"},
-      {"q":"NoNote 免费且开源吗？","a":"是。源代码在 GitHub 公开，并采用 MIT 许可证。"},
-      {"q":"支持哪些操作系统？","a":"当前 Release 提供 Apple Silicon 和 Intel Mac 安装包，以及 Windows x64 安装包；本版暂不提供 Linux 安装包。"},
-      {"q":"如何反馈问题？","a":"请在 GitHub 仓库创建 Issue，并附上 NoNote 版本、操作系统和复现步骤。"}
+      {"q": "NoNote 会上传我的文件吗？", "a": "原始文件保留在本地。如果你配置远程 AI Provider，完成请求所需的相关内容可能发送给该 Provider；也可以连接兼容的本地模型。"},
+      {"q": "目前支持哪些文件？", "a": "当前版本可以理解 Markdown、TXT、PDF 和 DOCX。原始文件会被保留；NoNote 不负责编辑 Word 文档。"},
+      {"q": "可以使用本地模型吗？", "a": "可以。NoNote 能连接 Ollama 等兼容的本地 Provider，实际可用模型和速度取决于你的设备。"},
+      {"q": "NoNote 免费且开源吗？", "a": "是。源代码在 GitHub 公开，并采用 MIT 许可证。"},
+      {"q": "支持哪些操作系统？", "a": "当前 Release 提供 Apple Silicon 和 Intel Mac 安装包，以及 Windows x64 安装包；本版暂不提供 Linux 安装包。"},
+      {"q": "如何反馈问题？", "a": "请在 GitHub 仓库创建 Issue，并附上 NoNote 版本、操作系统和复现步骤。"}
     ]
   },
   "footer": {
-    "tagline": "不只是笔记。",
-    "product": "产品",
+    "tagline": "Not Only Notes.",
+    "workflow": "工作方式",
+    "privacy": "本地优先",
     "download": "下载",
     "source": "源代码",
     "releases": "版本发布",
