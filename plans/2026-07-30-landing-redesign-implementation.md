@@ -1,7 +1,7 @@
 # NoNote Landing Redesign Implementation
 
 > Date: 2026-07-30
-> Status: Implementation complete; awaiting real product captures
+> Status: Complete
 > Design: `docs/2026-07-30-landing-redesign-design.md`
 
 ## Goal
@@ -65,6 +65,6 @@ Verification:
 
 - The bilingual narrative, static rendering, visual system, responsive layout, motion and interaction states are implemented.
 - The old concept product image has been removed and is not referenced by production output or metadata.
-- Explicit product-media placeholders reserve the final compositions until verified MVP captures arrive.
-- Automated tests and production builds pass; desktop and narrow viewport screenshots have been reviewed.
-- Final asset conversion, source records and screenshot-specific tuning remain pending on the eight real MVP source captures.
+- Verified Chinese and English MVP captures now power the hero, workflow, Reader, Assistant and Task Center evidence scenes.
+- Raw captures stay local and are excluded from builds; reviewed WebP derivatives and their source record are versioned.
+- Automated tests and production builds pass; desktop, narrow viewport and full-page screenshots have been reviewed.
