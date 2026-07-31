@@ -120,6 +120,7 @@
   .product-stage { position: relative; max-width: 1140px; margin: clamp(4rem, 8vw, 7rem) auto 0; }
   .stage-aura { position: absolute; inset: -15% 10% 5%; z-index: -1; background: radial-gradient(circle, oklch(.74 .105 153 / .25), transparent 67%); filter: blur(34px); }
   .product-window, .workflow-visual { position: relative; overflow: hidden; border: 1px solid var(--line-strong); border-radius: var(--radius-m); background: white; box-shadow: var(--shadow); }
+  .product-media { display: block; width: 100%; height: auto; background: var(--night); }
   .window-bar { display: flex; align-items: center; gap: .38rem; height: 36px; padding: 0 12px; color: var(--ink-3); border-bottom: 1px solid var(--line); background: var(--surface); font-size: .68rem; }
   .window-bar i { width: 8px; height: 8px; border-radius: 50%; background: var(--line-strong); }
   .window-bar i:first-child { background: oklch(.67 .18 28); }
@@ -171,7 +172,7 @@
   .workflow-story { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; padding-top: 0 !important; }
   .workflow-visual { position: sticky; top: 32px; box-shadow: none; border-color: oklch(.35 .025 150); background: var(--night-2); }
   .workflow-visual .window-bar { color: var(--night-muted); border-color: oklch(.32 .025 150); background: var(--night-2); }
-  .workflow-media { min-height: 530px; background: linear-gradient(135deg, oklch(.17 .025 150), oklch(.13 .018 150)); }
+  .workflow-media { min-height: 0; background: var(--night); }
   .workflow-media .placeholder-grid { opacity: .15; }
   .workflow-media .placeholder-copy { color: var(--night-muted); background: linear-gradient(transparent, var(--night) 30%); }
   .workflow-media .placeholder-copy strong { color: var(--night-ink); }
@@ -235,12 +236,12 @@
   .evidence-copy h3 { margin-top: 1rem; font-size: clamp(1.65rem, 3.2vw, 2.7rem); }
   .evidence-copy p { margin-top: 1rem; color: var(--ink-2); }
   .evidence-media { position: relative; width: 100%; overflow: hidden; padding: 8px; border: 1px solid var(--line); border-radius: var(--radius-l); background: var(--surface); box-shadow: var(--shadow-small); cursor: zoom-in; text-align: left; }
-  .evidence-media .media-placeholder { min-height: 390px; border-radius: calc(var(--radius-l) - 7px); }
+  .evidence-media .product-media { min-height: 390px; object-fit: cover; object-position: center top; border-radius: calc(var(--radius-l) - 7px); }
   .evidence-media > span { position: absolute; right: 22px; bottom: 20px; display: inline-flex; align-items: center; gap: .4rem; padding: .55rem .7rem; border: 1px solid var(--line); border-radius: var(--radius-s); background: oklch(1 0 0 / .92); font-size: .74rem; font-weight: 680; backdrop-filter: blur(12px); }
   .media-dialog { width: min(1100px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 48px 12px 12px; border: 1px solid var(--line); border-radius: var(--radius-l); background: white; box-shadow: var(--shadow); }
   .media-dialog::backdrop { background: oklch(.08 0 0 / .72); backdrop-filter: blur(5px); }
   .media-dialog > button { position: absolute; top: 8px; right: 8px; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: var(--radius-s); background: var(--surface); cursor: pointer; }
-  .media-dialog .media-placeholder { min-height: min(680px, calc(100vh - 100px)); border-radius: var(--radius-m); }
+  .media-dialog .product-media { width: 100%; max-height: calc(100vh - 100px); object-fit: contain; border-radius: var(--radius-m); }
 
   .download-section { padding: clamp(6.5rem, 12vw, 10rem) max(20px, calc((100vw - 1180px) / 2)); background: var(--surface); }
   .download-heading { max-width: 850px; }
@@ -293,7 +294,7 @@
     .problem-heading > * { grid-column: 1 !important; }
     .workflow-story, .local, .faq { grid-template-columns: 1fr; }
     .workflow-visual { position: relative; top: auto; }
-    .workflow-media { min-height: 430px; }
+    .workflow-media { min-height: 0; }
     .local-points { grid-template-columns: 1fr; }
     .local-points article + article { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
     .evidence-item, .evidence-item.reverse { grid-template-columns: 1fr; }
@@ -324,7 +325,7 @@
     .problem-list li + li { border-left: 0; border-top: 1px solid var(--line); }
     .problem-list h3 { margin-top: 1.4rem; }
     .workflow-story { width: 100%; }
-    .workflow-media { min-height: 380px; }
+    .workflow-media { min-height: 0; }
     .workflow-steps button { min-height: 170px; }
     .why { min-height: auto; padding-inline: 14px; }
     .why-body { margin-left: 0; }
@@ -332,7 +333,7 @@
     .local-system { width: calc(100vw - 28px); }
     .local-points article { padding-right: 0; }
     .evidence-list { margin-top: 3rem; }
-    .evidence-media .media-placeholder { min-height: 330px; }
+    .evidence-media .product-media { min-height: 330px; }
     .download-section { padding-inline: 14px; }
     .download-meta { flex-direction: column; }
     .faq details p { padding-right: 0; }

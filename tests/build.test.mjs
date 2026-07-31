@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { execFileSync } from "node:child_process";
-import { readFileSync, statSync } from "node:fs";
+import { existsSync, readFileSync, statSync } from "node:fs";
 import test from "node:test";
 
 const runBuild = (url = "https://nonote.example") =>
@@ -63,5 +63,17 @@ test("generated pages contain the new narrative and no concept product image", (
     assert.match(html, /class="evidence section"/);
     assert.doesNotMatch(html, /product-preview\.jpg/);
     assert.equal((html.match(/<h1\b/g) || []).length, 1);
+  }
+});
+
+test("build publishes verified derivatives but never raw product captures", () => {
+  runBuild();
+  assert.equal(existsSync("dist/assets/product/source"), false);
+  for (const locale of ["en", "zh"]) {
+    for (const scene of ["workspace", "reader", "assistant", "output"]) {
+      const file = `dist/assets/product/derived/${locale}-${scene}.webp`;
+      assert.ok(statSync(file).size > 0, `${file} should exist`);
+      assert.ok(statSync(file).size <= 150 * 1024, `${file} should stay under 150KB`);
+    }
   }
 });

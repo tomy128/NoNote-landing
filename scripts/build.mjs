@@ -94,6 +94,9 @@ const mediaPlaceholder = (label, hint, className = "") => `
     <div class="placeholder-copy">${icon("file")}<strong>${esc(label)}</strong><span>${esc(hint)}</span></div>
   </div>`;
 
+const productMedia = (src, alt, className = "", height = 973) => `<img class="product-media ${className}" data-media-asset src="${src}" width="1600" height="${height}" alt="${esc(alt)}">`;
+const mediaLocale = (locale) => locale === "zh-CN" ? "zh" : "en";
+
 function renderHeader(c, locale) {
   const other = locale === "en" ? "zh-CN" : "en";
   return `<header class="site-header" data-header>
@@ -110,7 +113,7 @@ function renderHeader(c, locale) {
   </header>`;
 }
 
-function renderHero(c) {
+function renderHero(c, locale) {
   const steps = c.hero.demoSteps.map((step, index) => `<button type="button" class="demo-step${index === 0 ? " is-active" : ""}" data-demo-step="${index}" aria-pressed="${index === 0}"><span>0${index + 1}</span>${esc(step)}</button>`).join("");
   return `<section class="hero" aria-labelledby="hero-title">
     <div class="hero-copy" data-reveal>
@@ -123,8 +126,7 @@ function renderHero(c) {
     <div class="product-stage" data-demo data-reveal>
       <div class="stage-aura" aria-hidden="true"></div>
       <figure class="product-window">
-        <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>NoNote · Knowledge Workspace</span></div>
-        ${mediaPlaceholder(c.hero.mediaPending, c.hero.mediaHint, "hero-media")}
+        ${productMedia(`/assets/product/derived/${mediaLocale(locale)}-workspace.webp`, c.hero.mediaLabel, "hero-media")}
         <span class="demo-focus focus-0" aria-hidden="true"></span><span class="demo-focus focus-1" aria-hidden="true"></span><span class="demo-focus focus-2" aria-hidden="true"></span>
       </figure>
       <div class="demo-controls" aria-label="${esc(c.hero.mediaLabel)}">${steps}</div>
@@ -139,13 +141,12 @@ function renderProblem(c) {
   </section>`;
 }
 
-function renderWorkflow(c) {
+function renderWorkflow(c, locale) {
   return `<section class="workflow" id="workflow" aria-labelledby="workflow-title" data-workflow>
     <div class="workflow-intro section" data-reveal><p class="lead">${esc(c.workflow.lead)}</p><h2 id="workflow-title">${esc(c.workflow.title)}</h2><p>${esc(c.workflow.body)}</p></div>
     <div class="workflow-story section">
       <div class="workflow-visual" data-reveal>
-        <div class="window-bar" aria-hidden="true"><i></i><i></i><i></i><span>NoNote · Knowledge Lab</span></div>
-        ${mediaPlaceholder(c.workflow.mediaPending, c.hero.mediaHint, "workflow-media")}
+        ${productMedia(`/assets/product/derived/${mediaLocale(locale)}-workspace.webp`, c.workflow.mediaPending, "workflow-media")}
         <div class="workflow-signal" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
       </div>
       <div class="workflow-steps" role="tablist" aria-label="${esc(c.workflow.lead)}">
@@ -185,12 +186,12 @@ function renderLocal(c) {
   </section>`;
 }
 
-function renderEvidence(c) {
+function renderEvidence(c, locale) {
   return `<section class="evidence section" aria-labelledby="evidence-title">
     <div class="evidence-heading" data-reveal><p class="lead">${esc(c.evidence.lead)}</p><h2 id="evidence-title">${esc(c.evidence.title)}</h2><p>${esc(c.evidence.body)}</p></div>
     <div class="evidence-list">${c.evidence.items.map((item, index) => `<article class="evidence-item${index % 2 ? " reverse" : ""}" data-reveal>
       <div class="evidence-copy"><span>${item.number} · ${esc(item.label)}</span><h3>${esc(item.title)}</h3><p>${esc(item.text)}</p></div>
-      <button class="evidence-media" type="button" data-media-open="${item.id}" aria-label="${esc(c.evidence.open)}: ${esc(item.title)}">${mediaPlaceholder(item.media, c.hero.mediaHint, `media-${item.id}`)}<span>${esc(c.evidence.open)} ${icon("arrow")}</span></button>
+      <button class="evidence-media" type="button" data-media-open="${item.id}" aria-label="${esc(c.evidence.open)}: ${esc(item.title)}">${productMedia(`/assets/product/derived/${mediaLocale(locale)}-${item.id}.webp`, item.media, `media-${item.id}`, item.id === "reader" ? 766 : 973)}<span>${esc(c.evidence.open)} ${icon("arrow")}</span></button>
     </article>`).join("")}</div>
     <dialog class="media-dialog" data-media-dialog aria-label="${esc(c.evidence.open)}"><button type="button" data-media-close aria-label="${esc(c.evidence.close)}">${icon("close")}</button><div data-media-dialog-content></div></dialog>
   </section>`;
@@ -219,12 +220,13 @@ function renderFooter(c, locale) {
     <p class="copyright">© ${year} ${esc(c.footer.copyright)}</p></footer>`;
 }
 
-const body = (c, locale) => `${renderHeader(c, locale)}<main id="main">${renderHero(c)}<div class="proof-strip">${c.proof.map((item) => `<span>${icon("check")}${esc(item)}</span>`).join("")}</div>${renderProblem(c)}${renderWorkflow(c)}${renderWhy(c)}${renderLocal(c)}${renderEvidence(c)}${renderDownload(c)}${renderFaq(c)}</main>${renderFooter(c, locale)}`;
+const body = (c, locale) => `${renderHeader(c, locale)}<main id="main">${renderHero(c, locale)}<div class="proof-strip">${c.proof.map((item) => `<span>${icon("check")}${esc(item)}</span>`).join("")}</div>${renderProblem(c)}${renderWorkflow(c, locale)}${renderWhy(c)}${renderLocal(c)}${renderEvidence(c, locale)}${renderDownload(c)}${renderFaq(c)}</main>${renderFooter(c, locale)}`;
 const render = (c, locale, canonical) => template.replaceAll("{{LANG}}", locale === "zh-CN" ? "zh-CN" : "en").replaceAll("{{LOCALE}}", locale).replaceAll("{{HEAD}}", head(c, locale, canonical)).replaceAll("{{SKIP}}", locale === "zh-CN" ? "跳到主要内容" : "Skip to main content").replaceAll("{{BODY}}", body(c, locale));
 
 await rm(dist, { recursive: true, force: true });
 await Promise.all([mkdir(path.join(dist, "en"), { recursive: true }), mkdir(path.join(dist, "zh-CN"), { recursive: true }), mkdir(path.join(dist, "assets"), { recursive: true })]);
 await cp(path.join(src, "assets"), path.join(dist, "assets"), { recursive: true });
+await rm(path.join(dist, "assets", "product", "source"), { recursive: true, force: true });
 const enPage = render(en, "en", `${baseUrl}/en/`);
 const zhPage = render(zh, "zh-CN", `${baseUrl}/zh-CN/`);
 const rootPage = render(en, "en", `${baseUrl}/`).replace("</head>", `<script>try{const saved=localStorage.getItem("nonote-locale");const wanted=saved||((navigator.language||"").toLowerCase().startsWith("zh")?"zh-CN":"en");if(location.pathname==="/"&&wanted!=="en")location.replace("/"+wanted+"/")}catch{}</script></head>`);

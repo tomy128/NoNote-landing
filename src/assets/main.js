@@ -145,7 +145,7 @@ function initMediaDialog() {
   let trigger;
   document.querySelectorAll("[data-media-open]").forEach((button) => button.addEventListener("click", () => {
     trigger = button;
-    content.replaceChildren(button.querySelector(".media-placeholder").cloneNode(true));
+    content.replaceChildren(button.querySelector("[data-media-asset]").cloneNode(true));
     dialog.showModal();
     close.focus();
   }));

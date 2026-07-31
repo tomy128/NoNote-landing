@@ -21,7 +21,7 @@
     "github": "View on GitHub",
     "note": "Free and open source · macOS & Windows",
     "mediaLabel": "The real NoNote product interface",
-    "mediaPending": "Real MVP product image coming next",
+    "mediaPending": "The complete four-pane NoNote workspace",
     "mediaHint": "Full four-pane workspace · English UI",
     "demoSteps": ["Start with your files", "Understand and verify", "Keep the result"]
   },
@@ -40,7 +40,7 @@
     "lead": "One continuous path to value",
     "title": "Keep your files. Change what they can do.",
     "body": "No migration ritual. NoNote builds understanding around your existing files so finding, asking and making become one piece of work.",
-    "mediaPending": "One real Workspace will continue through every scene here",
+    "mediaPending": "One real Workspace continuing through the workflow",
     "steps": [
       {"id": "keep", "number": "01", "verb": "Existing files", "title": "Start with what you already keep", "text": "Bring in an ordinary folder without giving up its familiar structure or original files."},
       {"id": "understand", "number": "02", "verb": "Understand & find", "title": "Search beyond filenames", "text": "Read Markdown, TXT, PDF and DOCX together, combining exact words with semantic relevance."},
@@ -78,13 +78,13 @@
   "evidence": {
     "lead": "A real product at work",
     "title": "Not a concept mockup. The NoNote that already exists.",
-    "body": "Every final product image will come from the current MVP running with a safe demo Workspace. The media slots below lock the composition, copy and motion now, so real captures can drop in without a redesign.",
+    "body": "Every scene below comes from the current MVP: reading and understanding source material, receiving grounded answers, and observing durable local work.",
     "open": "View larger",
     "close": "Close product image",
     "items": [
       {"id": "reader", "number": "01", "label": "Read", "title": "Understand different files in one workspace", "text": "Read the source, summary and tags, then step into a more focused reading surface when you need it.", "media": "Real Reader / Focus Reader capture"},
       {"id": "assistant", "number": "02", "label": "Ask", "title": "Every answer remains connected to its source", "text": "Bring specific files into a conversation and inspect the citations instead of trusting an isolated block of text.", "media": "Real Assistant and citations capture"},
-      {"id": "output", "number": "03", "label": "Keep", "title": "Turn useful output into an editable note", "text": "Confirm the content and destination, then let the result return to your Workspace and keep evolving.", "media": "Real Save as Note / Task Center capture"}
+      {"id": "output", "number": "03", "label": "Background", "title": "Long-running work stays visible without blocking the interface", "text": "Imports, syncs and other durable tasks keep reporting progress, results and states that need attention in the Task Center.", "media": "Real Task Center capture"}
     ]
   },
   "download": {

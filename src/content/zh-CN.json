@@ -21,7 +21,7 @@
     "github": "在 GitHub 查看",
     "note": "免费开源 · 支持 macOS 与 Windows",
     "mediaLabel": "真实 NoNote 产品界面",
-    "mediaPending": "真实 MVP 产品图即将加入",
+    "mediaPending": "NoNote 中文完整四栏工作台",
     "mediaHint": "完整四栏工作台 · 中文界面",
     "demoSteps": ["从已有文件开始", "理解并找到依据", "把结果存回笔记"]
   },
@@ -40,7 +40,7 @@
     "lead": "一条连续的价值路径",
     "title": "保留你的文件，改变它们能做什么。",
     "body": "不需要先完成一场知识迁移。NoNote 围绕原有文件建立理解，让查找、提问和产出成为同一段工作。",
-    "mediaPending": "此处将展示同一真实 Workspace 的连续界面",
+    "mediaPending": "同一真实 Workspace 的连续工作界面",
     "steps": [
       {"id": "keep", "number": "01", "verb": "已有文件", "title": "从你已经保存的内容开始", "text": "导入普通文件夹，保留熟悉的目录结构和原始文件。"},
       {"id": "understand", "number": "02", "verb": "理解与检索", "title": "不只匹配文件名，也理解内容", "text": "在 Markdown、TXT、PDF 与 DOCX 中统一阅读，并结合文字与语义检索。"},
@@ -78,13 +78,13 @@
   "evidence": {
     "lead": "真实产品，真实工作流",
     "title": "不是概念原型，而是已经在工作的 NoNote。",
-    "body": "最终产品图将全部来自当前 MVP 的真实运行界面。现在的媒体槽先固定构图、说明和动效，素材到位后无需改版。",
+    "body": "以下画面全部来自当前 MVP 的真实运行界面：从阅读与理解，到有依据的回答，再到可观察的后台任务。",
     "open": "放大查看",
     "close": "关闭产品图",
     "items": [
       {"id": "reader", "number": "01", "label": "阅读", "title": "在同一个工作空间理解不同文件", "text": "阅读原文、摘要与标签，并随时进入更专注的阅读模式。", "media": "Reader / Focus Reader 真实截图"},
       {"id": "assistant", "number": "02", "label": "提问", "title": "回答始终连接它的来源", "text": "把具体文件带入对话，在引用中看见依据，而不是只得到一段无法验证的文字。", "media": "Assistant 与引用真实截图"},
-      {"id": "output", "number": "03", "label": "留下", "title": "把有价值的结果变成可编辑笔记", "text": "确认内容和保存位置后，让产出回到你的 Workspace 继续演进。", "media": "Save as Note / 任务中心真实截图"}
+      {"id": "output", "number": "03", "label": "后台", "title": "耗时工作透明可见，不再拖住界面", "text": "导入、同步和其他持久任务在任务中心持续反馈进度、结果与需要关注的状态。", "media": "任务中心真实截图"}
     ]
   },
   "download": {
