@@ -1,0 +1,25 @@
+name: Trigger Vercel Deploy
+
+on:
+  # 情况 1：直接 commit/push 到 main 分支
+  push:
+    branches:
+      - main
+  # 情况 2：PR 合并到 main 分支
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:
+  deploy:
+    # 逻辑判断：如果是 push 事件，或者（是 PR 事件且已被成功合并），才执行
+    if: |
+      github.event_name == 'push' || 
+      (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel Deploy Hook
+        run: |
+          curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
