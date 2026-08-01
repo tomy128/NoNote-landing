@@ -10,6 +10,16 @@ const runBuild = (url = "https://nonote.example") =>
     encoding: "utf8",
   });
 
+const runBuildWithEnv = (environment) => {
+  const env = { ...process.env };
+  delete env.SITE_URL;
+  return execFileSync(process.execPath, ["scripts/build.mjs"], {
+    cwd: process.cwd(),
+    env: { ...env, ...environment },
+    encoding: "utf8",
+  });
+};
+
 test("build generates all localized routes and metadata", () => {
   runBuild();
   for (const file of ["dist/index.html", "dist/en/index.html", "dist/zh-CN/index.html", "dist/robots.txt", "dist/sitemap.xml"]) {
@@ -32,6 +42,25 @@ test("build rejects invalid site URLs in production", () => {
       stdio: "pipe",
     }),
   );
+});
+
+test("GitHub Pages project URLs prefix every internal asset and locale route", () => {
+  runBuild("https://tomy128.github.io/NoNote-landing");
+  const root = readFileSync("dist/index.html", "utf8");
+  const zh = readFileSync("dist/zh-CN/index.html", "utf8");
+  assert.match(root, /href="\/NoNote-landing\/assets\/styles\.css"/);
+  assert.match(root, /src="\/NoNote-landing\/assets\/main\.js"/);
+  assert.match(root, /href="\/NoNote-landing\/zh-CN\/"/);
+  assert.match(root, /location\.pathname==="\/NoNote-landing\/"/);
+  assert.match(zh, /src="\/NoNote-landing\/assets\/product\/derived\/zh-workspace\.webp"/);
+  assert.match(zh, /rel="canonical" href="https:\/\/tomy128\.github\.io\/NoNote-landing\/zh-CN\/"/);
+});
+
+test("Vercel builds derive an HTTPS site URL from the deployment environment", () => {
+  runBuildWithEnv({ CI: "true", VERCEL_PROJECT_PRODUCTION_URL: "nonote.vercel.app" });
+  const en = readFileSync("dist/en/index.html", "utf8");
+  assert.match(en, /rel="canonical" href="https:\/\/nonote\.vercel\.app\/en\/"/);
+  assert.match(en, /href="\/assets\/styles\.css"/);
 });
 
 test("generated pages use unique ids and have image alt text", () => {
