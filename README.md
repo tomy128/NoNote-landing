@@ -20,6 +20,15 @@ SITE_URL=https://nonote.example npm run build
 
 The deployable site is written to `dist/`.
 
+## Deploy
+
+The repository includes deployment configuration for:
+
+- Vercel via `vercel.json`
+- GitHub Pages via `.github/workflows/deploy-pages.yml`
+
+Both root-domain and GitHub Pages project-path deployments are supported. See [deployment](docs/deployment.md) for the one-time repository settings and custom-domain rules.
+
 ## Check
 
 ```bash
